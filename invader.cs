@@ -3,14 +3,17 @@ namespace DefenseGame
     class Invader
     {
         private readonly Path _path;
-        private int _pathStep = 0;
+        private int _pathStep = 0; // This keeps track of the invader's location on the path
         
+        // This is a Computed Property using the angle bracket notation syntax
+        // Gets the MapLocation of the invader based on its _pathStep
         public MapLocation Location => _path.GetLocationAt(_pathStep);
         
+        // This is a Computed Property using Curly Braces syntax
         // True if the invader has reached the end of the path
         public bool HasScored { get { return _pathStep >= _path.Length; } }
         
-        public int Health { get; private set; } = 2;
+        public int Health { get; private set; } = 2; // Health of Invader, initialized to 2 w/private setter
         
         public bool IsNeutralized => Health <= 0;
         
@@ -21,8 +24,10 @@ namespace DefenseGame
             _path = path;
         }
         
+        // This method uses the newer single line syntax w/fat arrow
         public void Move() => _pathStep += 1;
         
+        // This method uses the more traditional syntax w/curly braces
         public void DecreaseHealth(int factor)
         {
             Health -= factor;
