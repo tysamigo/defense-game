@@ -28,7 +28,7 @@ namespace DefenseGame
         public void Move() => _pathStep += 1;
         
         // This method uses the more traditional syntax w/curly braces
-        public void DecreaseHealth(int factor)
+        public virtual void DecreaseHealth(int factor)
         {
             Health -= factor;
         }
