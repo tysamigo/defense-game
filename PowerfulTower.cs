@@ -1,4 +1,4 @@
-namespace TreehouseDefense
+namespace DefenseGame
 {
     class PowerfulTower : Tower
     {
