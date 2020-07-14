@@ -21,7 +21,7 @@ namespace DefenseGame
         // randomly generated number with the accuracy of the tower.
         private bool IsSuccessfulShot()
         {
-            return _random.NextDouble() < _accuracy;
+            return _random.NextDouble() < Accuracy;
         }
         
         // Loops through the invaders array and shoots at them
@@ -29,11 +29,11 @@ namespace DefenseGame
         {
             foreach(Invader invader in invaders)
             {
-                if(invader.IsActive && _location.InRangeOf(invader.Location, _range))
+                if(invader.IsActive && _location.InRangeOf(invader.Location, Range))
                 {
                     if(IsSuccessfulShot())
                     {
-                        invader.DecreaseHealth(_power);
+                        invader.DecreaseHealth(Power);
                         Console.WriteLine("Shot at and hit an invader!");
                         if(invader.IsNeutralized)
                         {
