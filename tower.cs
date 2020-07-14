@@ -4,9 +4,9 @@ namespace DefenseGame
 {
     class Tower
     {
-        private const int _range = 1; // how far the tower can shoot
-        private const int _power = 1; // how much to decrease the invader's health
-        private const double _accuracy = .75; // how accurate the tower is at successfully shooting an invader
+        protected virtual int Range { get; } = 1; // how far the tower can shoot
+        protected virtual int Power { get; } = 1; // how much to decrease the invader's health
+        protected virtual double Accuracy { get; } = .75; // how accurate the tower is at successfully shooting an invader
         
         private static readonly Random _random = new Random(); // allows the tower to miss its target by using the Random Class to generate a random number
         
