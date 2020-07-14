@@ -1,3 +1,4 @@
 # exclude build output from repo
 /bin
 /obj
+*.json
