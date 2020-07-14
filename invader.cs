@@ -7,6 +7,8 @@ namespace DefenseGame
         private readonly Path _path;
         private int _pathStep = 0; // This keeps track of the invader's location on the path
         
+        protected virtual int StepSize{ get; } = 1;
+
         // This is a Computed Property using the angle bracket notation syntax
         // Gets the MapLocation of the invader based on its _pathStep
         public MapLocation Location => _path.GetLocationAt(_pathStep);
@@ -27,7 +29,7 @@ namespace DefenseGame
         }
         
         // This method uses the newer single line syntax w/fat arrow
-        public void Move() => _pathStep += 1;
+        public void Move() => _pathStep += StepSize;
         
         // This method uses the more traditional syntax w/curly braces
         public virtual void DecreaseHealth(int factor)
