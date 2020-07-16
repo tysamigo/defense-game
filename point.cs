@@ -37,6 +37,11 @@ namespace DefenseGame
             return (int)Math.Sqrt(Math.Pow(X-x, 2) + Math.Pow(Y-y, 2));
         }
         
+        public override int GetHashCode()
+        {
+            return X.GetHashCode() * 31 + Y.GetHashCode();
+        }
+        
         // This calculates the distance between the two Point objects
         public int DistanceTo(Point point)
         {
