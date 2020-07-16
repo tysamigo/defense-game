@@ -2,7 +2,7 @@ using System;
 
 namespace DefenseGame
 {
-    class Invader
+    abstract class Invader
     {
         private readonly Path _path;
         private int _pathStep = 0; // This keeps track of the invader's location on the path
