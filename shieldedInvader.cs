@@ -6,6 +6,8 @@ namespace DefenseGame
     {       
         private static System.Random _random = new System.Random(); // static random instance
         
+        public override int Health { get; protected set; } = 2; // Health of Invader
+        
         public ShieldedInvader(Path path) : base(path)
         {}
 
